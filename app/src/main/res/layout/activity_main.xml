@@ -10,29 +10,315 @@
             type="com.project.tk.o1220_animate.MainActivity" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            style="@style/myButton"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            android:background="@drawable/shape_circle_sky"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
-            style="@style/myTv"
-            android:text="Hello World!"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="parent" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-    </android.support.constraint.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/btn1"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick1}"
+                app:layout_constraintBottom_toTopOf="@+id/btn2"
+                app:layout_constraintEnd_toStartOf="@+id/tv1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tv1"
+                style="@style/myTv"
+                android:text="..."
+                app:layout_constraintBottom_toBottomOf="@id/btn1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn1"
+                app:layout_constraintTop_toTopOf="@+id/btn1" />
+
+            <ImageButton
+                android:id="@+id/btn2"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick2}"
+                app:layout_constraintBottom_toTopOf="@+id/btn3"
+                app:layout_constraintEnd_toStartOf="@+id/tv2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+            <TextView
+                android:id="@+id/tv2"
+                style="@style/myTv"
+                android:text="Scale"
+                app:layout_constraintBottom_toBottomOf="@+id/btn2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn2"
+                app:layout_constraintTop_toTopOf="@+id/btn2" />
+
+            <ImageButton
+                android:id="@+id/btn3"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick3}"
+                app:layout_constraintBottom_toTopOf="@+id/btn4"
+                app:layout_constraintEnd_toStartOf="@+id/tv3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+            <TextView
+                android:id="@+id/tv3"
+                style="@style/myTv"
+                android:text="MyBounceInterpolator"
+                app:layout_constraintBottom_toBottomOf="@+id/btn3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn3"
+                app:layout_constraintTop_toTopOf="@+id/btn3" />
+
+            <ImageButton
+                android:id="@+id/btn4"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick4}"
+                app:layout_constraintBottom_toTopOf="@+id/btn5"
+                app:layout_constraintEnd_toStartOf="@+id/tv4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+            <TextView
+                android:id="@+id/tv4"
+                style="@style/myTv"
+                android:text="SkewAnim"
+                app:layout_constraintBottom_toBottomOf="@+id/btn4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn4"
+                app:layout_constraintTop_toTopOf="@+id/btn4" />
+
+            <ImageButton
+                android:id="@+id/btn5"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick5}"
+                app:layout_constraintBottom_toTopOf="@+id/btn6"
+                app:layout_constraintEnd_toStartOf="@+id/tv5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+            <TextView
+                android:id="@+id/tv5"
+                style="@style/myTv"
+                android:text="CameraAnim"
+                app:layout_constraintBottom_toBottomOf="@+id/btn5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn5"
+                app:layout_constraintTop_toTopOf="@+id/btn5" />
+
+            <ImageButton
+                android:id="@+id/btn6"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick6}"
+                app:layout_constraintBottom_toTopOf="@+id/btn7"
+                app:layout_constraintEnd_toStartOf="@+id/tv6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+            <TextView
+                android:id="@+id/tv6"
+                style="@style/myTv"
+                android:text="rotate_alpha"
+                app:layout_constraintBottom_toBottomOf="@+id/btn6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn6"
+                app:layout_constraintTop_toTopOf="@+id/btn6" />
+
+            <ImageButton
+                android:id="@+id/btn7"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_yellow"
+                android:onClick="@{activity::onClick7}"
+                app:layout_constraintBottom_toTopOf="@+id/btn8"
+                app:layout_constraintEnd_toStartOf="@+id/tv7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn6" />
+
+            <TextView
+                android:id="@+id/tv7"
+                style="@style/myTv"
+                android:text="translate mix bounce interpolator"
+                app:layout_constraintBottom_toBottomOf="@+id/btn7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn7"
+                app:layout_constraintTop_toTopOf="@+id/btn7" />
+
+
+            <ImageButton
+                android:id="@+id/btn8"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick8}"
+                app:layout_constraintBottom_toTopOf="@+id/btn9"
+                app:layout_constraintEnd_toStartOf="@+id/tv8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+            <TextView
+                android:id="@+id/tv8"
+                style="@style/myTv"
+                android:text="@string/interpolator1"
+                app:layout_constraintBottom_toBottomOf="@+id/btn8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn8"
+                app:layout_constraintTop_toTopOf="@+id/btn8" />
+
+            <ImageButton
+                android:id="@+id/btn9"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick9}"
+                app:layout_constraintBottom_toTopOf="@+id/btn10"
+                app:layout_constraintEnd_toStartOf="@+id/tv9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+            <TextView
+                android:id="@+id/tv9"
+                style="@style/myTv"
+                android:text="@string/interpolator2"                 app:layout_constraintBottom_toBottomOf="@+id/btn9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn9"
+                app:layout_constraintTop_toTopOf="@+id/btn9" />
+
+            <ImageButton
+                android:id="@+id/btn10"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick10}"
+                app:layout_constraintBottom_toTopOf="@+id/btn11"
+                app:layout_constraintEnd_toStartOf="@+id/tv10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+            <TextView
+                android:id="@+id/tv10"
+                style="@style/myTv"
+                android:text="@string/interpolator3"
+                app:layout_constraintBottom_toBottomOf="@+id/btn10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn10"
+                app:layout_constraintTop_toTopOf="@+id/btn10" />
+
+            <ImageButton
+                android:id="@+id/btn11"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick11}"
+                app:layout_constraintBottom_toTopOf="@+id/btn12"
+                app:layout_constraintEnd_toStartOf="@+id/tv11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn10" />
+
+            <TextView
+                android:id="@+id/tv11"
+                style="@style/myTv"
+                android:text="@string/interpolator4"
+                app:layout_constraintBottom_toBottomOf="@+id/btn11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn11"
+                app:layout_constraintTop_toTopOf="@+id/btn11" />
+
+            <ImageButton
+                android:id="@+id/btn12"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick12}"
+                app:layout_constraintEnd_toStartOf="@+id/tv12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn11" />
+
+            <TextView
+                android:id="@+id/tv12"
+                style="@style/myTv"
+                android:text="@string/interpolator5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn12"
+                app:layout_constraintTop_toTopOf="@+id/btn12" />
+
+            <ImageButton
+                android:id="@+id/btn13"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick13}"
+                app:layout_constraintEnd_toStartOf="@+id/tv13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn12" />
+
+            <TextView
+                android:id="@+id/tv13"
+                style="@style/myTv"
+                android:text="@string/interpolator6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn13"
+                app:layout_constraintTop_toTopOf="@+id/btn13" />
+
+            <ImageButton
+                android:id="@+id/btn14"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick14}"
+                app:layout_constraintEnd_toStartOf="@+id/tv14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn13" />
+
+            <TextView
+                android:id="@+id/tv14"
+                style="@style/myTv"
+                android:text="@string/interpolator7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn14"
+                app:layout_constraintTop_toTopOf="@+id/btn14" />
+
+
+            <ImageButton
+                android:id="@+id/btn15"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick15}"
+                app:layout_constraintEnd_toStartOf="@+id/tv15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn14" />
+
+            <TextView
+                android:id="@+id/tv15"
+                style="@style/myTv"
+                android:text="@string/interpolator8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn15"
+                app:layout_constraintTop_toTopOf="@+id/btn15" />
+
+
+            <ImageButton
+                android:id="@+id/btn16"
+                style="@style/myButton"
+                android:background="@drawable/shape_circle_sky"
+                android:onClick="@{activity::onClick16}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn15" />
+
+            <TextView
+                android:id="@+id/tv16"
+                style="@style/myTv"
+                android:text="@string/interpolator9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn16"
+                app:layout_constraintTop_toTopOf="@+id/btn16" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 </layout>

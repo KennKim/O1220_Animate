@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <integer name="anim_duration_all_interpolator">1000</integer>
+    <integer name="anim_from_x_delta_all_interpolator">0</integer>
+    <integer name="anim_to_x_delta_all_interpolator">400</integer>
+
+</resources>

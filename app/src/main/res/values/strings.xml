@@ -4,4 +4,30 @@
 
 
     <string name="myImage">image</string>
+
+
+
+
+    <string name="interpolator1">linear_interpolator</string>
+    <string name="interpolator2">accelerate_interpolator</string>
+    <string name="interpolator3">decelerate_interpolator</string>
+    <string name="interpolator4">accelerate_decelerate_interpolator</string>
+    <string name="interpolator5">anticipate_interpolator</string>
+    <string name="interpolator6">overshoot_interpolator</string>
+    <string name="interpolator7">anticipate_overshoot_interpolator</string>
+    <string name="interpolator8">bounce_interpolator</string>
+    <string name="interpolator9">cycle_interpolator</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

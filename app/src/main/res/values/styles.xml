@@ -14,13 +14,17 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:src">@drawable/ic_action_android_white</item>
         <item name="android:background">@drawable/shape_circle_yellow</item>
-        <item name="android:description">@string/myImage</item>
+        <item name="android:contentDescription">@string/myImage</item>
+        <item name="layout_constraintHorizontal_chainStyle">packed</item>
+        <item name="layout_constraintVertical_chainStyle">spread</item>
+        <item name="layout_constraintHorizontal_bias">0.05</item>
 
     </style>
 
     <style name="myTv" parent="android:Widget.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
 
     </style>
 </resources>
